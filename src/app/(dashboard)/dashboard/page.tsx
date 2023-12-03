@@ -3,7 +3,6 @@ import { FC } from 'react'
 import type { Metadata } from 'next'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
-import { json } from 'stream/consumers'
 
 export const metadata: Metadata = {
     title: 'Dashboard',
