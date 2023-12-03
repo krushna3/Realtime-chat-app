@@ -3,7 +3,7 @@ import { UpstashRedisAdapter } from '@next-auth/upstash-redis-adapter';
 import db from './db';
 import GoogleProvider from 'next-auth/providers/google'
 
-function getGoogleCredentials() {
+const getGoogleCredentials = () => {
     const clientId = process.env.GOOGLE_CLIENT_ID
     const clintSecret = process.env.GOOGLE_CLIENT_SECRET
 
@@ -63,7 +63,7 @@ export const authOptions: NextAuthOptions = {
         }
     }
 }
-
+//------------------------------------------------------------------------------------------------------------
 // import { NextAuthOptions } from 'next-auth';
 // import { UpstashRedisAdapter } from '@next-auth/upstash-redis-adapter';
 // import db from './db';

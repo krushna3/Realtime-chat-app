@@ -22,7 +22,7 @@ const Page: FC<PageProps> = ({ }) => {
         try {
             await signIn('google')
         } catch (error) {
-            toast.error('Some thing went worng with your login.')
+            toast.error('Something went worng with your login.')
         }
         finally {
             setIsLoading(false)
