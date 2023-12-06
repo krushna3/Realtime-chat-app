@@ -17,8 +17,7 @@ const page: FC<PageProps> = async ({ }) => {
     const session = await getServerSession(authOptions);
     return (
         <>
-            <pre>{JSON.stringify(session)}</pre>
-            <Button variant={'default'}>Hello</Button>
+            <div>Dashboard</div>
         </>
     )
 }
