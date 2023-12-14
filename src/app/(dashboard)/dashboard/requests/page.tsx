@@ -1,9 +1,14 @@
 import FriendRequests from '@/components/FriendRequests'
 import { fetchRedis } from '@/helpers/redis'
 import { authOptions } from '@/lib/auth'
+import { Metadata } from 'next'
 import { getServerSession } from 'next-auth'
 import { notFound } from 'next/navigation'
-import { FC } from 'react'
+
+export const metadata: Metadata = {
+    title: 'Friend Requests | Realtime Chat App',
+    description: 'Created By Krushna_3 | NEXT JS',
+}
 
 const page = async () => {
     const session = await getServerSession(authOptions)

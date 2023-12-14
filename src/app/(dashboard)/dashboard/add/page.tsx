@@ -1,5 +1,11 @@
 import AddFriendButton from '@/components/AddFriendButton'
+import { Metadata } from 'next'
 import { FC } from 'react'
+
+export const metadata: Metadata = {
+    title: 'Add Friend | Realtime Chat App',
+    description: 'Created By Krushna_3 | NEXT JS',
+}
 
 const page: FC = () => {
     return (

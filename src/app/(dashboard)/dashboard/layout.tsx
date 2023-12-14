@@ -11,6 +11,14 @@ import { fetchRedis } from '@/helpers/redis'
 import { getFriendsByUserId } from '@/helpers/get-friends-by-user-id'
 import SidebarChatList from '@/components/SidebarChatList'
 import MobileChatLayout from '@/components/MobileChatLayout'
+import { Metadata } from 'next'
+import Settings from '@/components/Settings'
+
+export const metadata: Metadata = {
+    title: 'Dashboard',
+    description: 'Created By Krushna_3 | NEXT JS',
+}
+
 
 interface LayoutProps {
     children: ReactNode
@@ -57,7 +65,11 @@ const Layout = async ({ children }: LayoutProps) => {
             </div>
             <div className='hidden md:flex h-full w-full max-w-xs grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6'>
                 <Link href='/dashboard' className='flex h-16 shrink-0 items-center'>
-                    <Icons.Logo className='h-8 w-auto text-indigo-600' />
+                    {/* <Icons.Logo className='h-8 w-auto text-indigo-600' /> */}
+                    <div className='flex gap-1 items-end'>
+                        <img src="/Images/Logo.png" alt="Dashboard" className='h-10 w-10' />
+                        <span className='text-base font-semibold hover:text-slate-400'>Chatyl</span>
+                    </div>
                 </Link>
 
                 {friends.length > 0 ? (
@@ -98,6 +110,9 @@ const Layout = async ({ children }: LayoutProps) => {
                                         sessionId={session.user.id}
                                         initialUnseenRequestCount={unseenRequestCount}
                                     />
+                                </li>
+                                <li>
+                                    <Settings />
                                 </li>
                             </ul>
                         </li>

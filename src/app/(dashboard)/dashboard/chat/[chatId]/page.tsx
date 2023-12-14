@@ -2,12 +2,16 @@ import ChatInput from '@/components/ChatInput'
 import Messages from '@/components/Messages'
 import { fetchRedis } from '@/helpers/redis'
 import { authOptions } from '@/lib/auth'
-import db from '@/lib/db'
 import { messageArrayValidator } from '@/lib/validations/message'
+import { Metadata } from 'next'
 import { getServerSession } from 'next-auth'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import { FC } from 'react'
+
+export const metadata: Metadata = {
+    title: 'Chats | Realtime Chat App',
+    description: 'Created By Krushna_3 | NEXT JS',
+}
 
 interface pageProps {
     params: {

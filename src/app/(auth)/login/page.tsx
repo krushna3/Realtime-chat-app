@@ -3,16 +3,8 @@ import Button from '@/components/ui/Button'
 import { FC, useState } from 'react'
 import { signIn } from 'next-auth/react'
 import { toast } from 'react-hot-toast'
-import type { Metadata } from 'next'
 
-const metadata: Metadata = {
-    title: 'Login',
-    description: 'Realtime-chat-app',
-}
-
-interface PageProps {
-
-}
+interface PageProps { }
 
 const Page: FC<PageProps> = ({ }) => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -34,7 +26,10 @@ const Page: FC<PageProps> = ({ }) => {
             <div className='flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8'>
                 <div className='flex w-full flex-col items-center max-w-md space-y-8'>
                     <div className='flex flex-col items-center gap-8'>
-                        Logo
+                        <div className='flex flex-col items-center'>
+                            <img src="/Images/Logo.png" alt="Dashboard" className='h-12 w-12' />
+                            <span className='text-base font-semibold'>Chatyl</span>
+                        </div>
                         <h2 className='mt-6 text-center text-3xl font-bold tracking-tight text-gray-900'>
                             Sign in to your account
                         </h2>
