@@ -16,16 +16,17 @@
 
 .scrollbar-track-blue-lighter::-webkit-scrollbar-track {
     --bg-opacity: 1;
-    background-color: #f7fafc;
-    background-color: rgba(247, 250, 252, var(--bg-opacity));
+    background-color: #f3f4f6;
+    background-color: rgba(243, 244, 246, var(--bg-opacity));
 }
 
 .scrollbar-thumb-blue::-webkit-scrollbar-thumb {
     --bg-opacity: 1;
-    background-color: #edf2f7;
-    background-color: rgba(237, 242, 247, var(--bg-opacity));
+    background-color: #4a5568;
+    background-color: rgba(74, 85, 104, var(--bg-opacity));
 }
 
 .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
     border-radius: 0.25rem;
+    background-color: #5a67d8;
 }

@@ -68,12 +68,12 @@ const Layout = async ({ children }: LayoutProps) => {
                     {/* <Icons.Logo className='h-8 w-auto text-indigo-600' /> */}
                     <div className='flex gap-1 items-end'>
                         <img src="/Images/Logo.png" alt="Dashboard" className='h-10 w-10' />
-                        <span className='text-base font-semibold hover:text-slate-400'>Chatyl</span>
+                        <span className='text-base font-semibold hover:text-slate-400 dark:hover:text-gray-700 text-black dark:text-white'>Chatyl</span>
                     </div>
                 </Link>
 
                 {friends.length > 0 ? (
-                    <div className='text-xs font-semibold leading-6 text-gray-400'>
+                    <div className='text-xs font-semibold leading-6 text-gray-400 dark:text-gray-700'>
                         Your chats
                     </div>) : null}
 
@@ -83,7 +83,7 @@ const Layout = async ({ children }: LayoutProps) => {
                             <SidebarChatList sessionId={session.user.id} friends={friends} />
                         </li>
                         <li>
-                            <div className='text-xs font-semibold leading-6 text-gray-400'>Overview</div>
+                            <div className='text-xs font-semibold leading-6 text-gray-400 dark:text-gray-700'>Overview</div>
 
                             <ul role='list' className='-m-2 mt-2 space-y-1'>
                                 {
@@ -93,9 +93,9 @@ const Layout = async ({ children }: LayoutProps) => {
                                             <li key={option.id}>
                                                 <Link
                                                     href={option.href}
-                                                    className='text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-3 rounded-md p-2 text-sm leading-6 font-semibold'
+                                                    className='text-gray-700 dark:text-[#A7A1AB] hover:text-indigo-600 dark:hover:text-indigo-600 hover:bg-gray-50 dark:hover:bg-[#09090E] group flex gap-3 rounded-md p-2 text-sm leading-6 font-semibold'
                                                 >
-                                                    <span className='text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white'>
+                                                    <span className='text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white dark:bg-black dark:group-hover:bg-[#09090E]'>
                                                         <Icon className='h-4 w-4' />
                                                     </span>
 
@@ -119,8 +119,8 @@ const Layout = async ({ children }: LayoutProps) => {
 
 
                         <li className='-mx-6 mt-auto flex items-center'>
-                            <div className='flex flex-1 items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900'>
-                                <div className='relative h-8 w-8 bg-gray-50'>
+                            <div className='flex flex-1 items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900 dark:text-gray-200'>
+                                <div className='relative h-8 w-8 bg-gray-50 dark:bg-black'>
                                     <Image
                                         fill
                                         referrerPolicy='no-referrer'
@@ -133,7 +133,7 @@ const Layout = async ({ children }: LayoutProps) => {
                                 <span className='sr-only'>Your Profile</span>
                                 <div className='flex flex-col'>
                                     <span aria-hidden='true'>{session.user.name}</span>
-                                    <span className='text-xs text-zinc-400' aria-hidden='true'>{session.user.email}</span>
+                                    <span className='text-xs text-zinc-400 dark:text-gray-700' aria-hidden='true'>{session.user.email}</span>
                                 </div>
                             </div>
 

@@ -34,14 +34,14 @@ const Page = async ({ }) => {
 
     return (
         <div className='container py-12'>
-            <h1 className='font-bold text-5xl mb-8'>Recent chats</h1>
+            <h1 className='font-bold text-5xl mb-8 text-black dark:text-white'>Recent chats</h1>
             {friendsWithLastMessage.length === 0 ? (
-                <p className='text-sm text-zinc-500'>Nothing to show here...</p>
+                <p className='text-sm text-zinc-500 dark:text-zinc-400'>Nothing to show here...</p>
             ) : (
                 friendsWithLastMessage.map((friend) => (
                     <div
                         key={friend.id}
-                        className='relative bg-zinc-50 border border-zinc-200 p-3 rounded-md mb-2'>
+                        className='relative bg-zinc-50 border border-zinc-200 p-3 rounded-md mb-2 dark:bg-[#09090E] dark:border-[#473F4E]'>
                         <div className='absolute right-4 inset-y-0 flex items-center'>
                             <ChevronRight className='h-7 w-7 text-zinc-400' />
                         </div>
@@ -67,7 +67,7 @@ const Page = async ({ }) => {
                             <div>
                                 <h4 className='text-lg font-semibold'>{friend.name}</h4>
                                 <p className='mt-1 max-w-md'>
-                                    <span className='text-zinc-400'>
+                                    <span className='text-zinc-400 dark:text-gray-700'>
                                         {friend.lastMessage?.senderId === session.user.id
                                             ? 'You: '
                                             : ''}

@@ -11,7 +11,7 @@ export const buttonVariants = cva(
         variants: {
             variant: {
                 default: 'bg-slate-900 text-white hover:bg-slate-800',
-                ghost: 'bg-transparent hover:text-slate-900 hover:bg-slate-200'
+                ghost: 'bg-transparent hover:text-slate-900 hover:bg-slate-200 dark:hover:bg-[#09090E] dark:hover:text-gray-50'
             },
             size: {
                 default: 'h-10 py-2 px-4',
