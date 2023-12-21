@@ -30,14 +30,14 @@ const Page: FC<PageProps> = ({ }) => {
                             <img src="/Images/Logo.png" alt="Dashboard" className='h-12 w-12' />
                             <span className='text-base font-semibold'>Chatyl</span>
                         </div>
-                        <h2 className='mt-6 text-center text-3xl font-bold tracking-tight text-gray-900'>
+                        <h2 className='mt-6 text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-zinc-100'>
                             Sign in to your account
                         </h2>
                     </div>
                     <Button
                         isLoading={isLoading}
                         type='button'
-                        className='max-w-sm mx-auto w-full'
+                        className='max-w-sm mx-auto w-full bg-black dark:bg-zinc-200 dark:text-black text-white dark:hover:bg-indigo-100'
                         onClick={loginWithGoogle}
                     >
                         {isLoading ? null : (

@@ -25,14 +25,16 @@ const page: FC<pageProps> = ({ }) => {
 
     const handleSelect = (menu: string) => {
         try {
+            if (menu === 'dark' || menu == 'light') {
+                setTheme(menu)
+            }
             setOpen(false)
-            setTheme(menu)
         } catch (err) {
             return new Response('UnAuthrized', { status: 401 })
         }
     }
 
-    const menus = ['light', 'dark',]
+    const menus = ['light', 'dark', 'system default']
     // 'system default'
     return (
         <div className='container py-12 bg-white dark:bg-black'>
