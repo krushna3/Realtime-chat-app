@@ -6,7 +6,7 @@ import { FC, useEffect, useState } from 'react'
 interface pageProps { }
 
 
-const page: FC<pageProps> = ({ }) => {
+const Page: FC<pageProps> = ({ }) => {
     const [open, setOpen] = useState(false)
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
@@ -95,4 +95,4 @@ const page: FC<pageProps> = ({ }) => {
     )
 }
 
-export default page
+export default Page
