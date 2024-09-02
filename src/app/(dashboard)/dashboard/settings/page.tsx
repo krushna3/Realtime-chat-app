@@ -66,24 +66,26 @@ const page: FC<pageProps> = ({ }) => {
                     </div>
                     {
                         open &&
-                        <div
-                            className='bg-indigo-600 text-white rounded-md p-1 absolute -top-1 -left-1'>
-                            <ul>
-                                {
-                                    menus.map((menu, index) => (
-                                        <li
-                                            key={index}
-                                            className={`flex w-44 h-8 items-center m-0.5 rounded-md cursor-pointer hover:bg-indigo-500 ${theme === menu ? 'bg-indigo-500' : ''}`}
-                                            onClick={() => handleSelect(menu)}
-                                            value={menu}
-                                        >
-                                            {theme === menu ? <span className='h-6 w-1 bg-indigo-200 m-1 rounded-full'></span> : ''}
-                                            {menu === 'light' ? <Sun className='w-4 h-4 m-2' /> : menu === 'dark' ? <Moon className='w-4 h-4 m-2' /> : <Monitor className='w-4 h-4 m-2' />}
-                                            <span className='capitalize'>{menu}</span>
-                                        </li>
-                                    ))
-                                }
-                            </ul>
+                        <div className='absolute -top-1 -left-1'>
+                            <div
+                                className='bg-indigo-600 text-white rounded-md p-1'>
+                                <ul>
+                                    {
+                                        menus.map((menu, index) => (
+                                            <li
+                                                key={index}
+                                                className={`flex w-44 h-8 items-center m-0.5 rounded-md cursor-pointer hover:bg-indigo-500 ${theme === menu ? 'bg-indigo-500' : ''}`}
+                                                onClick={() => handleSelect(menu)}
+                                                value={menu}
+                                            >
+                                                {theme === menu ? <span className='h-6 w-1 bg-indigo-200 m-1 rounded-full'></span> : ''}
+                                                {menu === 'light' ? <Sun className='w-4 h-4 m-2' /> : menu === 'dark' ? <Moon className='w-4 h-4 m-2' /> : <Monitor className='w-4 h-4 m-2' />}
+                                                <span className='capitalize'>{menu}</span>
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
                         </div>
                     }
                 </div>
